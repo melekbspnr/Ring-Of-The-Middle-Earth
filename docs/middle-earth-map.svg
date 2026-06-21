@@ -1,0 +1,303 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="100%" height="100%" style="background-color: #f8f5eb; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.25" />
+    </filter>
+    <filter id="box-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15" />
+    </filter>
+
+    <g id="icon-plains">
+      <path d="M-8 4 L8 4 M-5 4 L-7 -2 M0 4 L0 -4 M5 4 L7 -2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-swamp">
+      <path d="M-10 1 Q-5 -3 0 1 T10 1 M-8 6 Q-4 2 1 6 T9 6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <g id="icon-mountains">
+      <path d="M-12 6 L-4 -8 L2 2 M-2 6 L6 -10 L14 6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-forest">
+      <path d="M0 -10 L-7 2 L-3 2 L-9 12 L9 12 L3 2 L7 2 Z" fill="#fff"/>
+    </g>
+    <g id="icon-fortress">
+      <path d="M-9 -6 L-9 8 L9 8 L9 -6 L5 -6 L5 -2 L-5 -2 L-5 -6 Z" fill="#fff"/>
+    </g>
+    <g id="icon-volcanic">
+      <path d="M-11 8 L-4 -4 L4 -4 L11 8 Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M-3 -8 Q0 -13 3 -8" fill="none" stroke="#ffdd59" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#f8f5eb" />
+
+  <text x="700" y="55" font-size="38" font-weight="900" text-anchor="middle" fill="#2c3e50" letter-spacing="2">RING OF THE MIDDLE EARTH</text>
+  <text x="700" y="90" font-size="18" font-weight="600" text-anchor="middle" fill="#576574">22 NODES (REGIONS) • 37 PATHS (EDGES) — STRATEGY GRAPH</text>
+
+  <g id="map-content" transform="translate(0, 50)">
+
+    <g stroke-linecap="round" stroke-linejoin="round">
+      <line x1="100" y1="250" x2="250" y2="250" stroke="#888" stroke-width="3" />
+      <line x1="250" y1="250" x2="400" y2="150" stroke="#888" stroke-width="3" />
+      <line x1="250" y1="250" x2="550" y2="150" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="400" y1="150" x2="550" y2="150" stroke="#888" stroke-width="3" />
+      <line x1="550" y1="150" x2="600" y2="300" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="550" y1="150" x2="700" y2="300" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="600" y1="300" x2="700" y2="300" stroke="#888" stroke-width="3" />
+      <line x1="700" y1="300" x2="850" y2="350" stroke="#888" stroke-width="3" />
+      <line x1="700" y1="300" x2="650" y2="500" stroke="#888" stroke-width="3" />
+      <line x1="650" y1="500" x2="500" y2="450" stroke="#888" stroke-width="3" />
+      <line x1="650" y1="500" x2="650" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="650" y1="500" x2="850" y2="650" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="500" y1="450" x2="350" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="350" y1="650" x2="650" y2="500" stroke="#888" stroke-width="3" />
+      <line x1="650" y1="650" x2="500" y2="700" stroke="#888" stroke-width="3" />
+      <line x1="500" y1="700" x2="350" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="850" y1="350" x2="1000" y2="250" stroke="#888" stroke-width="3" />
+      <line x1="850" y1="350" x2="1000" y2="450" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="1000" y1="250" x2="1000" y2="450" stroke="#888" stroke-width="3" />
+      <line x1="1000" y1="250" x2="1150" y2="250" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="1000" y1="450" x2="850" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="1000" y1="450" x2="1000" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="1000" y1="450" x2="1150" y2="450" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="850" y1="650" x2="1000" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="1000" y1="650" x2="1150" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="1150" y1="650" x2="1150" y2="450" stroke="#888" stroke-width="3" />
+      <line x1="1150" y1="650" x2="1150" y2="250" stroke="#888" stroke-width="3" />
+      <line x1="1150" y1="450" x2="1150" y2="250" stroke="#888" stroke-width="3" />
+      <line x1="1150" y1="450" x2="1300" y2="350" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="1150" y1="250" x2="1300" y2="350" stroke="#888" stroke-width="3" />
+      <line x1="100" y1="250" x2="250" y2="400" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="250" y1="250" x2="250" y2="400" stroke="#888" stroke-width="3" />
+      <line x1="250" y1="400" x2="350" y2="550" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+      <line x1="350" y1="550" x2="350" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="350" y1="550" x2="500" y2="700" stroke="#888" stroke-width="3" />
+      <line x1="350" y1="550" x2="650" y2="650" stroke="#888" stroke-width="3" />
+      <line x1="650" y1="650" x2="850" y2="650" stroke="#555" stroke-width="4" stroke-dasharray="8,8" />
+    </g>
+
+    <g id="nodes">
+
+      <g transform="translate(100,250)">
+        <rect x="-45" y="-50" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">The Shire</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-plains" />
+      </g>
+
+      <g transform="translate(250,250)">
+        <rect x="-35" y="-50" width="70" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Bree</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-plains" />
+      </g>
+
+      <g transform="translate(250,400)">
+        <rect x="-45" y="24" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Tharbad</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-swamp" />
+      </g>
+
+      <g transform="translate(400,150)">
+        <rect x="-55" y="-50" width="110" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Weathertop</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-mountains" />
+      </g>
+
+      <g transform="translate(550,150)">
+        <rect x="-45" y="-50" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Rivendell</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-mountains" />
+      </g>
+
+      <g transform="translate(500,450)">
+        <rect x="-45" y="-50" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Fangorn</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-forest" />
+      </g>
+
+      <g transform="translate(350,550)">
+        <rect x="-130" y="-14" width="105" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="-77.5" y="5" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Fords of Isen</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-plains" />
+      </g>
+
+      <g transform="translate(650,500)">
+        <rect x="-55" y="-50" width="110" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Rohan Plains</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-plains" />
+      </g>
+
+      <g transform="translate(600,300)">
+        <rect x="-35" y="24" width="70" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Moria</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-mountains" />
+      </g>
+
+      <g transform="translate(500,700)">
+        <rect x="-50" y="24" width="100" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Helm's Deep</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-fortress" />
+      </g>
+
+      <g transform="translate(350,650)">
+        <rect x="-45" y="24" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Isengard</text>
+        <circle r="20" fill="#eb3b5a" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-fortress" />
+      </g>
+
+      <g transform="translate(650,650)">
+        <rect x="-40" y="24" width="80" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Edoras</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-plains" />
+      </g>
+
+      <g transform="translate(700,300)">
+        <rect x="-45" y="-50" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Lothlórien</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-forest" />
+      </g>
+
+      <g transform="translate(1000,250)">
+        <rect x="-60" y="-50" width="120" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Dead Marshes</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-swamp" />
+      </g>
+
+      <g transform="translate(850,350)">
+        <rect x="-45" y="24" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Emyn Muil</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-mountains" />
+      </g>
+
+      <g transform="translate(850,650)">
+        <rect x="-50" y="24" width="100" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Minas Tirith</text>
+        <circle r="20" fill="#4b7bec" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-fortress" />
+      </g>
+
+      <g transform="translate(1000,450)">
+        <rect x="15" y="-45" width="75" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="52.5" y="-26" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Ithilien</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-forest" />
+      </g>
+
+      <g transform="translate(1000,650)">
+        <rect x="-45" y="24" width="90" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Osgiliath</text>
+        <circle r="20" fill="#a5b1c2" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-plains" />
+      </g>
+
+      <g transform="translate(1150,650)">
+        <rect x="-55" y="24" width="110" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="43" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Minas Morgul</text>
+        <circle r="20" fill="#eb3b5a" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-fortress" />
+      </g>
+
+      <g transform="translate(1150,450)">
+        <rect x="15" y="15" width="105" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="67.5" y="34" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Cirith Ungol</text>
+        <circle r="20" fill="#eb3b5a" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-mountains" />
+      </g>
+
+      <g transform="translate(1150,250)">
+        <rect x="-40" y="-50" width="80" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Mordor</text>
+        <circle r="20" fill="#eb3b5a" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-volcanic" />
+      </g>
+
+      <g transform="translate(1300,350)">
+        <rect x="-55" y="-50" width="110" height="28" rx="6" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+        <text x="0" y="-31" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Mount Doom</text>
+        <circle r="20" fill="#eb3b5a" stroke="#ffffff" stroke-width="3" filter="url(#shadow)" />
+        <use href="#icon-volcanic" />
+      </g>
+    </g>
+  </g>
+
+  <g id="legends" transform="translate(0, 830)">
+    
+    <g transform="translate(100, 0)">
+      <rect x="0" y="0" width="220" height="140" rx="8" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+      <text x="15" y="30" font-size="15" font-weight="bold" fill="#2c3e50">Start Control</text>
+      
+      <circle cx="25" cy="60" r="8" fill="#4b7bec" stroke="#fff" stroke-width="1.5" />
+      <text x="45" y="65" font-size="14" font-weight="600" fill="#576574">Free Peoples</text>
+      
+      <circle cx="25" cy="90" r="8" fill="#eb3b5a" stroke="#fff" stroke-width="1.5" />
+      <text x="45" y="95" font-size="14" font-weight="600" fill="#576574">Shadow</text>
+      
+      <circle cx="25" cy="120" r="8" fill="#a5b1c2" stroke="#fff" stroke-width="1.5" />
+      <text x="45" y="125" font-size="14" font-weight="600" fill="#576574">Neutral</text>
+    </g>
+
+    <g transform="translate(350, 0)">
+      <rect x="0" y="0" width="220" height="140" rx="8" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+      <text x="15" y="30" font-size="15" font-weight="bold" fill="#2c3e50">Path Costs</text>
+      
+      <line x1="15" y1="70" x2="60" y2="70" stroke="#888" stroke-width="3" />
+      <text x="70" y="75" font-size="14" font-weight="600" fill="#576574">Cost 1 (Solid Line)</text>
+      
+      <line x1="15" y1="110" x2="60" y2="110" stroke="#555" stroke-width="4" stroke-dasharray="6,4" />
+      <text x="70" y="115" font-size="14" font-weight="600" fill="#576574">Cost 2 (Dashed Line)</text>
+    </g>
+
+    <g transform="translate(600, 0)">
+      <rect x="0" y="0" width="450" height="140" rx="8" fill="#ffffff" stroke="#dcdde1" stroke-width="2" filter="url(#box-shadow)"/>
+      <text x="15" y="30" font-size="15" font-weight="bold" fill="#2c3e50">Terrain Icons</text>
+      
+      <g transform="translate(25, 55)">
+        <circle cx="0" cy="0" r="12" fill="#7f8fa6" />
+        <use href="#icon-plains" x="0" y="0" transform="scale(0.6)" />
+        <text x="20" y="5" font-size="14" font-weight="600" fill="#576574">Plains</text>
+      </g>
+      <g transform="translate(25, 85)">
+        <circle cx="0" cy="0" r="12" fill="#7f8fa6" />
+        <use href="#icon-swamp" x="0" y="0" transform="scale(0.6)" />
+        <text x="20" y="5" font-size="14" font-weight="600" fill="#576574">Swamp</text>
+      </g>
+      <g transform="translate(25, 115)">
+        <circle cx="0" cy="0" r="12" fill="#7f8fa6" />
+        <use href="#icon-mountains" x="0" y="0" transform="scale(0.6)" />
+        <text x="20" y="5" font-size="14" font-weight="600" fill="#576574">Mountains</text>
+      </g>
+
+      <g transform="translate(220, 55)">
+        <circle cx="0" cy="0" r="12" fill="#7f8fa6" />
+        <use href="#icon-forest" x="0" y="0" transform="scale(0.6)" />
+        <text x="20" y="5" font-size="14" font-weight="600" fill="#576574">Forest</text>
+      </g>
+      <g transform="translate(220, 85)">
+        <circle cx="0" cy="0" r="12" fill="#7f8fa6" />
+        <use href="#icon-fortress" x="0" y="0" transform="scale(0.6)" />
+        <text x="20" y="5" font-size="14" font-weight="600" fill="#576574">Fortress</text>
+      </g>
+      <g transform="translate(220, 115)">
+        <circle cx="0" cy="0" r="12" fill="#7f8fa6" />
+        <use href="#icon-volcanic" x="0" y="0" transform="scale(0.6)" />
+        <text x="20" y="5" font-size="14" font-weight="600" fill="#576574">Volcanic</text>
+      </g>
+    </g>
+
+  </g>
+
+</svg>

@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "OrderValidated",
+  "namespace": "rotr.orders",
+  "doc": "Validated order. V2 adds routeRiskScore (nullable). Schema evolution demo: V1 consumers continue without error.",
+  "fields": [
+    {"name": "playerId",       "type": "string"},
+    {"name": "unitId",         "type": "string"},
+    {"name": "orderType",      "type": "string"},
+    {"name": "payload",        "type": "bytes"},
+    {"name": "turn",           "type": "int"},
+    {"name": "timestamp",      "type": "long", "logicalType": "timestamp-millis"},
+    {
+      "name": "routeRiskScore",
+      "type": ["null", "int"],
+      "default": null,
+      "doc": "V2 field: nullable route risk score from Topology 2. V1 consumers ignore this field."
+    },
+    {
+      "name": "threatenedPaths",
+      "type": {"type": "array", "items": "string"},
+      "default": [],
+      "doc": "V2: list of threatened path IDs on the submitted route."
+    },
+    {
+      "name": "blockedPaths",
+      "type": {"type": "array", "items": "string"},
+      "default": [],
+      "doc": "V2: list of blocked path IDs on the submitted route."
+    }
+  ]
+}

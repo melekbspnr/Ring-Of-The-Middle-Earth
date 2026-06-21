@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "PathCorrupted",
+  "namespace": "rotr.events",
+  "doc": "Emitted when Saruman permanently sets surveillanceLevel=3 on a path.",
+  "fields": [
+    {"name": "pathId",    "type": "string"},
+    {"name": "turn",      "type": "int"},
+    {"name": "timestamp", "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}

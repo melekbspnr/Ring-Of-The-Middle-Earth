@@ -1,0 +1,66 @@
+{
+  "type": "record",
+  "name": "WorldStateSnapshot",
+  "namespace": "rotr.broadcast",
+  "doc": "Full game state. Produced to game.broadcast each turn end. ring-bearer.currentRegion is always empty string.",
+  "fields": [
+    {"name": "turn",      "type": "int"},
+    {
+      "name": "units",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "UnitPublic",
+          "fields": [
+            {"name": "id",            "type": "string"},
+            {"name": "currentRegion", "type": "string",
+              "doc": "Always empty string for ring-bearer in this topic."},
+            {"name": "strength",      "type": "int"},
+            {"name": "status",        "type": "string"},
+            {"name": "side",          "type": "string"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "regions",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "RegionPublic",
+          "fields": [
+            {"name": "id",           "type": "string"},
+            {"name": "controlledBy", "type": "string"},
+            {"name": "threatLevel",  "type": "int"},
+            {"name": "fortified",    "type": "boolean"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "paths",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "PathPublic",
+          "fields": [
+            {"name": "id",                "type": "string"},
+            {"name": "newStatus",         "type": "string"},
+            {"name": "surveillanceLevel", "type": "int"},
+            {"name": "tempOpenTurns",     "type": "int"}
+          ]
+        }
+      },
+      "default": []
+    },
+    {
+      "name": "ringBearerTrueRegion",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {"name": "timestamp", "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}

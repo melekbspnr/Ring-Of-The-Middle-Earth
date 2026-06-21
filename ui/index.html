@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ring of the Middle Earth — Distributed Strategy Game</title>
+  <meta name="description" content="Browser-based turn-based strategy game. Light Side vs Dark Side. Move the Ring Bearer secretly to Mount Doom or intercept it before it arrives.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ── Side Selection Screen ─────────────────────────────────────── -->
+  <div id="side-select-screen" class="fullscreen-overlay">
+    <div class="side-select-container">
+      <h1 class="game-title">Ring of the Middle Earth</h1>
+      <p class="game-subtitle">Choose your allegiance</p>
+      <div class="side-cards">
+        <button id="btn-light" class="side-card light-card" onclick="chooseSide('light')">
+          <div class="side-icon">⚔️</div>
+          <h2>Light Side</h2>
+          <p>Free Peoples</p>
+          <small>Guide the Ring Bearer to Mount Doom</small>
+        </button>
+        <button id="btn-dark" class="side-card dark-card" onclick="chooseSide('dark')">
+          <div class="side-icon">🔥</div>
+          <h2>Dark Side</h2>
+          <p>The Shadow</p>
+          <small>Find and destroy the Ring Bearer</small>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Main Game UI ───────────────────────────────────────────────── -->
+  <div id="game-ui" class="hidden">
+
+    <!-- Header -->
+    <header class="game-header">
+      <div class="header-left">
+        <h1 id="game-title-small">⚔ Ring of the Middle Earth</h1>
+        <span id="side-badge" class="side-badge"></span>
+      </div>
+      <div class="header-center">
+        <div class="turn-display">
+          <span class="turn-label">TURN</span>
+          <span id="turn-number" class="turn-number">1</span>
+          <span class="turn-label">/ 40</span>
+        </div>
+        <div id="turn-timer" class="turn-timer">60s</div>
+      </div>
+      <div class="header-right">
+        <div id="connection-status" class="connection-dot disconnected" title="SSE connection"></div>
+        <button id="btn-start-game" onclick="startGame()" class="btn-primary">Start Game</button>
+        <button id="btn-analysis" onclick="toggleAnalysisPanel()" class="btn-secondary">Analysis</button>
+      </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="game-main">
+
+      <!-- Map Panel — SVG haritası JS tarafından oluşturulur -->
+      <section class="map-panel" id="map-panel">
+      </section>
+
+      <!-- Right Sidebar -->
+      <aside class="sidebar">
+
+        <!-- Units Panel -->
+        <div class="panel units-panel">
+          <h3 class="panel-title">Units</h3>
+          <div id="units-list" class="units-list"></div>
+        </div>
+
+        <!-- Order Panel -->
+        <div class="panel order-panel">
+          <h3 class="panel-title">Orders</h3>
+          <div id="selected-unit-info" class="selected-unit hidden">
+            <div id="selected-unit-name" class="unit-name"></div>
+            <div id="available-orders" class="available-orders"></div>
+          </div>
+          <p id="no-selection" class="no-selection">Click a unit to give orders</p>
+        </div>
+
+        <!-- Log Panel -->
+        <div class="panel log-panel">
+          <h3 class="panel-title">Event Log</h3>
+          <div id="event-log" class="event-log"></div>
+        </div>
+
+      </aside>
+    </main>
+
+    <!-- Analysis Panel (slides in) -->
+    <div id="analysis-panel" class="analysis-panel hidden">
+      <div class="analysis-header">
+        <h3>Strategic Analysis</h3>
+        <button onclick="toggleAnalysisPanel()" class="btn-close">✕</button>
+      </div>
+      <div id="analysis-content" class="analysis-content">
+        <p class="loading">Loading analysis...</p>
+      </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-modal" class="modal hidden">
+      <div class="modal-box">
+        <h3 id="modal-title">Submit Order</h3>
+        <div id="modal-body"></div>
+        <div class="modal-actions">
+          <button id="modal-confirm" class="btn-primary">Confirm</button>
+          <button onclick="closeModal()" class="btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Win/Loss Overlay -->
+    <div id="gameover-overlay" class="gameover-overlay hidden">
+      <div class="gameover-box">
+        <h2 id="gameover-title"></h2>
+        <p id="gameover-cause"></p>
+        <button onclick="location.reload()" class="btn-primary">Play Again</button>
+      </div>
+    </div>
+
+  </div><!-- /#game-ui -->
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "RingBearerDetected",
+  "namespace": "rotr.ring",
+  "doc": "Produced to game.ring.detection. Consumed by Dark Side SSE ONLY.",
+  "fields": [
+    {"name": "regionId",  "type": "string",
+      "doc": "Region where Ring Bearer was detected."},
+    {"name": "turn",      "type": "int"},
+    {"name": "timestamp", "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}

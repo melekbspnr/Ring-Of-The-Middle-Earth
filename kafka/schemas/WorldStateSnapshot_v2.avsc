@@ -1,0 +1,53 @@
+{
+  "type": "record",
+  "name": "WorldStateSnapshot",
+  "namespace": "com.rotr.events",
+  "doc": "V2: Added gamePhase field (backward-compatible nullable addition).",
+  "fields": [
+    {"name": "turn",      "type": "int"},
+    {"name": "timestamp", "type": "long"},
+    {"name": "units", "type": {
+      "type": "array",
+      "items": {
+        "type": "record",
+        "name": "UnitState",
+        "fields": [
+          {"name": "unitId",        "type": "string"},
+          {"name": "currentRegion", "type": "string"},
+          {"name": "strength",      "type": "int"},
+          {"name": "status",        "type": "string"},
+          {"name": "side",          "type": "string"}
+        ]
+      }
+    }},
+    {"name": "regions", "type": {
+      "type": "array",
+      "items": {
+        "type": "record",
+        "name": "RegionState",
+        "fields": [
+          {"name": "regionId",     "type": "string"},
+          {"name": "controlledBy", "type": "string"},
+          {"name": "threatLevel",  "type": "int"},
+          {"name": "fortified",    "type": "boolean"}
+        ]
+      }
+    }},
+    {"name": "paths", "type": {
+      "type": "array",
+      "items": {
+        "type": "record",
+        "name": "PathState",
+        "fields": [
+          {"name": "pathId",            "type": "string"},
+          {"name": "newStatus",         "type": "string"},
+          {"name": "surveillanceLevel", "type": "int"},
+          {"name": "tempOpenTurns",     "type": "int"}
+        ]
+      }
+    }},
+    {"name": "ringBearerTrueRegion", "type": ["null", "string"], "default": null},
+    {"name": "gamePhase", "type": ["null", "string"], "default": null, "doc": "V2: Current game phase (EARLY, MID, LATE)"},
+    {"name": "activePlayers", "type": ["null", "int"], "default": null, "doc": "V2: Number of active players"}
+  ]
+}

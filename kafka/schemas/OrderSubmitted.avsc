@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "OrderSubmitted",
+  "namespace": "rotr.orders",
+  "doc": "Raw order submitted by a player. Produced to game.orders.raw.",
+  "fields": [
+    {"name": "playerId",  "type": "string"},
+    {"name": "unitId",    "type": "string"},
+    {"name": "orderType", "type": "string"},
+    {"name": "payload",   "type": "bytes",
+      "doc": "JSON-encoded order-specific payload"},
+    {"name": "turn",      "type": "int"},
+    {"name": "timestamp", "type": "long",
+      "logicalType": "timestamp-millis"}
+  ]
+}

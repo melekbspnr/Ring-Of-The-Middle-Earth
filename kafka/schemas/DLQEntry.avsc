@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "DLQEntry",
+  "namespace": "rotr.dlq",
+  "doc": "Dead Letter Queue entry for invalid or unprocessable messages.",
+  "fields": [
+    {"name": "originalTopic",  "type": "string"},
+    {"name": "partition",      "type": "int"},
+    {"name": "offset",         "type": "long"},
+    {"name": "errorCode",      "type": "string",
+      "doc": "WRONG_TURN | NOT_YOUR_UNIT | INVALID_PATH | PATH_BLOCKED | UNIT_NOT_ADJACENT | INVALID_TARGET | DUPLICATE_UNIT_ORDER | ABILITY_ON_COOLDOWN | MAIA_DISABLED | DESTROY_CONDITION_NOT_MET"},
+    {"name": "errorMessage",   "type": "string"},
+    {"name": "rawPayload",     "type": "bytes"},
+    {"name": "timestamp",      "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}

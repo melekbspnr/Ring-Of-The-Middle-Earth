@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "RingBearerMoved",
+  "namespace": "rotr.ring",
+  "doc": "Produced to game.ring.position. Consumed by Light Side SSE ONLY. Never broadcast to Dark Side.",
+  "fields": [
+    {"name": "trueRegion", "type": "string",
+      "doc": "The Ring Bearer's actual current region. MUST NOT appear in broadcast topic."},
+    {"name": "turn",       "type": "int"},
+    {"name": "timestamp",  "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}

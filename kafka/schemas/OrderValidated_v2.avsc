@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "OrderValidated",
+  "namespace": "com.rotr.events",
+  "doc": "V2: Added routeRiskScore, threatenedPaths, blockedPaths fields (backward-compatible nullable additions).",
+  "fields": [
+    {"name": "playerId",        "type": "string"},
+    {"name": "unitId",          "type": "string"},
+    {"name": "orderType",       "type": "string"},
+    {"name": "turn",            "type": "int"},
+    {"name": "timestamp",       "type": "long"},
+    {"name": "payload",         "type": "bytes"},
+    {"name": "validationCode",  "type": ["null", "string"], "default": null},
+    {"name": "routeRiskScore",  "type": ["null", "int"],    "default": null, "doc": "V2: Route risk score from Topology 2 enrichment"},
+    {"name": "threatenedPaths", "type": ["null", {"type": "array", "items": "string"}], "default": null, "doc": "V2: List of THREATENED path IDs in the route"},
+    {"name": "blockedPaths",    "type": ["null", {"type": "array", "items": "string"}], "default": null, "doc": "V2: List of BLOCKED path IDs in the route"},
+    {"name": "processedBy",     "type": ["null", "string"], "default": null, "doc": "V2: Instance ID that validated this order"}
+  ]
+}

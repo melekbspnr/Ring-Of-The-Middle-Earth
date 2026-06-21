@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "BattleResolved",
+  "namespace": "rotr.events",
+  "fields": [
+    {"name": "regionId",     "type": "string"},
+    {"name": "attackerWon",  "type": "boolean"},
+    {"name": "attackerPower","type": "int"},
+    {"name": "defenderPower","type": "int"},
+    {"name": "turn",         "type": "int"},
+    {"name": "timestamp",    "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "UnitMoved",
+  "namespace": "rotr.events",
+  "fields": [
+    {"name": "unitId",    "type": "string"},
+    {"name": "from",      "type": "string"},
+    {"name": "to",        "type": "string"},
+    {"name": "strength",  "type": ["null", "int"], "default": null},
+    {"name": "status",    "type": ["null", "string"], "default": null},
+    {"name": "cooldown",  "type": ["null", "int"], "default": null},
+    {"name": "turn",      "type": "int"},
+    {"name": "timestamp", "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}

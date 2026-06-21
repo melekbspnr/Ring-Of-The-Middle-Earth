@@ -1,0 +1,17 @@
+.gocache/
+option-b/.gocache/
+
+# Local build and coverage outputs
+bin/
+dist/
+coverage.out
+*.test
+
+# Runtime/demo artifacts generated locally
+artifacts/*.txt
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

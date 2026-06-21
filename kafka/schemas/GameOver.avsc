@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "GameOver",
+  "namespace": "rotr.broadcast",
+  "doc": "End of stream marker. Produced with enable.idempotence=true for exactly-once guarantee (Section 13).",
+  "fields": [
+    {"name": "winner",    "type": "string",
+      "doc": "FREE_PEOPLES | SHADOW | DRAW"},
+    {"name": "cause",     "type": "string",
+      "doc": "RING_DESTROYED | RING_BEARER_CAUGHT | MAX_TURNS_REACHED"},
+    {"name": "turn",      "type": "int"},
+    {"name": "timestamp", "type": "long", "logicalType": "timestamp-millis"}
+  ]
+}
